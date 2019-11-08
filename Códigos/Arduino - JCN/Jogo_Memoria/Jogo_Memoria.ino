@@ -74,7 +74,7 @@ for ( int x = 0 ; x < 4 ; x ++)
    pinMode (button [x], INPUT);  // pinos do botão são entradas
    digitalWrite (button [x],LOW);  // habilita pulldown interno; os botões começam na posição baixa;
   }
-if(comando == 'B') { 
+if(comando == 'B' && fim == 0) { 
 digitalWrite(ledpin[6], HIGH);
 boolean inicial = digitalRead(button[0]);
 if(inicial == HIGH){
@@ -378,6 +378,7 @@ if(inicial == HIGH){
                buttonPressed[z] = {0};
               }
           }
+          break;
     }
 }
 }
